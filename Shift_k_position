@@ -1,0 +1,15 @@
+L=[1,2,3,4]
+k =int(input("Enter the k position:"))
+if k<=len(L):
+    print("Processing...")
+
+    for i in range(len(L)):
+        if i<k:
+            temp = L[len(L)-1]
+            L.pop()
+            L.insert(0,temp)
+            i+=1
+    print(L)
+    
+else:
+    print("Invalid selection")
