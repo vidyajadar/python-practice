@@ -3,13 +3,15 @@ k =int(input("Enter the k position:"))
 if k<=len(L):
     print("Processing...")
 
-    for i in range(len(L)):
+    for i in range(k):
         if i<k:
             temp = L[len(L)-1]
             L.pop()
             L.insert(0,temp)
-            i+=1
+        
     print(L)
     
 else:
     print("Invalid selection")
+
+#We can also use Slicing L= L[-k:]+L[:-k]
