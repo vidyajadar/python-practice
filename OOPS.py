@@ -1,21 +1,14 @@
 class Student:
-    college_name = "ABC College"
 
-    def __init__(self, fullname, RollNo):
-        self.name = fullname
-        print("adding new student in database..")
-        self.RollNo = RollNo
-        print("Enter roll number")
-
-    def welcome(self):
-        print("Welcome student", self.name)
-    def get_RollNo(self):
-        return self.RollNo
-
-s1 = Student("Karan", 23)
-print(s1.name)
-print(s1.RollNo)
-s1.welcome()
-s1.get_RollNo()
-
+    def __init__ (self, name, mark1, mark2, mark3):
+        self.name = name
+        self.mark1 = mark1
+        self.mark2 = mark2
+        self.mark3 = mark3
     
+    def avg(self):
+        sum = self.mark1+self.mark2+self.mark3
+        print("Hi",self.name,"your avg score is:", sum/3)
+
+s1=Student("Vidya", 12,23,45)
+s1.avg()
